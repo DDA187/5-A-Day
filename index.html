@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Selection</title>
+</head>
+<body>
+    <h1>Welcome to the Lottery Game!</h1>
+    <form action="/" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label>Select 5 numbers (1-36):</label><br>
+        <div>
+            {% for number in range(1, 37) %}
+                <input type="checkbox" name="numbers" value="{{ number }}"> {{ number }}
+            {% endfor %}
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
